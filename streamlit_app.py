@@ -1,10 +1,9 @@
 import streamlit as st
 import pandas as pd
-from data_loader import fetch_movie_data
 from recommender import recommend_movies
 
 # Load data
-movies_df = pd.read_csv('IMDB_Movies_Data')
+movies_df = pd.read_csv('IMDB_Movies_Data.csv')
 
 # Streamlit app
 st.title("Movie Recommendation System")
