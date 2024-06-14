@@ -23,8 +23,7 @@ if favorite_genres and allowed_ratings:
     for idx, row in recommended_movies.iterrows():
         col1, col2 = st.columns([1, 3])
         with col1:
-            #st.image(row['Image_URL'], width=100)
-            st.image(row['Image_URL'], format='JPEG', width=100)
+            st.image(row['Image_URL'], width=100)
         with col2:
             st.subheader(row['Name'])
             st.write(f"Year: {row['Year']}")
