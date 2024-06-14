@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from app.data_loader import fetch_movie_data
-from app.recommender import recommend_movies
+from data_loader import fetch_movie_data
+from recommender import recommend_movies
 
 # Load data
 movies_df = fetch_movie_data()
