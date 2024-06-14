@@ -10,7 +10,8 @@ st.title("Movie Recommendation System")
 st.write("Enter your preferences to get movie recommendations!")
 
 # User inputs
-favorite_genres = st.multiselect('Select favorite genres:', movies_df['Genres'].explode().unique())
+genres_list = movies_df['Genres'].str.split(',').explode().str.strip().unique()
+favorite_genres = st.multiselect('Select favorite genres:', genres_list)
 min_year = st.slider('Select minimum year:', min_value=1900, max_value=2025, value=2010)
 max_year = st.slider('Select maximum year:', min_value=1900, max_value=2025, value=2025)
 allowed_ratings = st.multiselect('Select allowed ratings:', movies_df['Rate'].unique())
