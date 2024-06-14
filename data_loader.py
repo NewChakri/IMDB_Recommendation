@@ -94,3 +94,5 @@ def fetch_movie_data():
     })
 
     return movies_df
+movies_df = fetch_movie_data()
+movies_df.to_csv('IMDB_Movies_Data.csv')
